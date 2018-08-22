@@ -11,14 +11,15 @@
     - [PassengerDetails](#supply.common.vNext.PassengerDetails)
     - [Point](#supply.common.vNext.Point)
     - [Price](#supply.common.vNext.Price)
+    - [Supplier](#supply.common.vNext.Supplier)
     - [UnixTime](#supply.common.vNext.UnixTime)
     - [Vehicle](#supply.common.vNext.Vehicle)
-  
+
     - [EnvironmentType](#supply.common.vNext.EnvironmentType)
     - [Vehicle.VehicleType](#supply.common.vNext.Vehicle.VehicleType)
-  
-  
-  
+
+
+
 
 - [marketplace/public/grpc/supply_handler/vNext/gen-doc/supply_handler_rides_messages.proto](#marketplace/public/grpc/supply_handler/vNext/gen-doc/supply_handler_rides_messages.proto)
     - [CreateSimpleRideRequest](#supply.rides.vNext.CreateSimpleRideRequest)
@@ -40,32 +41,32 @@
     - [SupplierCancelRideRequest](#supply.rides.vNext.SupplierCancelRideRequest)
     - [SupplierRideStatus](#supply.rides.vNext.SupplierRideStatus)
     - [SupplierRideStatusUpdate](#supply.rides.vNext.SupplierRideStatusUpdate)
-  
+
     - [SupplierRideStatus.RideStatus](#supply.rides.vNext.SupplierRideStatus.RideStatus)
     - [SupplierRideStatusUpdate.RideStatus](#supply.rides.vNext.SupplierRideStatusUpdate.RideStatus)
-  
-  
-  
+
+
+
 
 - [marketplace/public/grpc/supply_handler/vNext/gen-doc/supply_handler_rides_service.proto](#marketplace/public/grpc/supply_handler/vNext/gen-doc/supply_handler_rides_service.proto)
-  
-  
-  
+
+
+
     - [RidesDispatchApi](#supply.rides.vNext.RidesDispatchApi)
     - [RidesSupplyApi](#supply.rides.vNext.RidesSupplyApi)
-  
+
 
 - [marketplace/public/grpc/supply_handler/vNext/gen-doc/supply_handler_shared_rides_messages.proto](#marketplace/public/grpc/supply_handler/vNext/gen-doc/supply_handler_shared_rides_messages.proto)
-  
-  
-  
-  
+
+
+
+
 
 - [marketplace/public/grpc/supply_handler/vNext/gen-doc/supply_handler_shared_rides_service.proto](#marketplace/public/grpc/supply_handler/vNext/gen-doc/supply_handler_shared_rides_service.proto)
-  
-  
-  
-  
+
+
+
+
 
 - [Scalar Value Types](#scalar-value-types)
 
@@ -86,18 +87,18 @@
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| country | [string](#string) |  | Localized country name |
-| country_code | [string](#string) |  | ISO 3166-alpha-3 country code |
-| state | [string](#string) |  | State (first subdivision level below the country, if relevant) |
-| county | [string](#string) |  | County (second subdivision level below the country, if relevant) |
-| city | [string](#string) |  | City/town |
-| district | [string](#string) |  | District (subdivision level below the city) |
-| sub_district | [string](#string) |  | Sub-district (subdivision level below the district; e.g. commonly used in IND) |
-| street | [string](#string) |  | Street name |
-| house_number | [string](#string) |  | House number; depending on regional characteristics, can also be house name |
-| postal_code | [string](#string) |  | Postal code (zipcode) |
-| building_name | [string](#string) |  | Building name; e.g. commonly used in HKG |
-| line | [string](#string) | repeated | Formatted address lines |
+| country | [string](#string) |  | Localized country name. |
+| country_code | [string](#string) |  | ISO 3166-alpha-3 country code. |
+| state | [string](#string) |  | State (first subdivision level below the country, if relevant). |
+| county | [string](#string) |  | County (second subdivision level below the country, if relevant). |
+| city | [string](#string) |  | City/town. |
+| district | [string](#string) |  | District (subdivision level below the city). |
+| sub_district | [string](#string) |  | Sub-district (subdivision level below the district; e.g. commonly used in IND). |
+| street | [string](#string) |  | Street name. |
+| house_number | [string](#string) |  | House number; depending on regional characteristics, can also be house name. |
+| postal_code | [string](#string) |  | Postal code (zipcode). |
+| building_name | [string](#string) |  | Building name; e.g. commonly used in HKG. |
+| line | [string](#string) | repeated | Formatted address lines. |
 
 
 
@@ -112,11 +113,11 @@
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| driver_id | [string](#string) |  | Unique Id of the driver in the dispatcher system (required) |
-| name | [string](#string) |  | Full name of the driver, in English (required) |
-| phone | [string](#string) |  | Phone number though which the driver is reachable (required) |
-| picture_url | [string](#string) |  | URL of a driver photo (required by some jurisdictions) |
-| driving_license_id | [string](#string) |  | License id of the driver (required by some jurisdictions) |
+| driver_id | [string](#string) |  | Mandatory. Unique Id of the driver in the dispatcher system. |
+| name | [string](#string) |  | Mandatory. Full name of the driver, in English. |
+| phone | [string](#string) |  | Mandatory. Phone number though which the driver is reachable. |
+| picture_url | [string](#string) |  | URL of a driver photo. |
+| driving_license_id | [string](#string) |  | Mandatory in some jurisdictions. License id of the driver. |
 
 
 
@@ -141,9 +142,9 @@
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| point | [Point](#supply.common.vNext.Point) |  | geographic coordinates (latitude, longtitude) |
-| address | [Address](#supply.common.vNext.Address) |  | description, state and zip code are optional, rest are mandatory |
-| free_text | [string](#string) |  | Place name or street address in a free text format |
+| point | [Point](#supply.common.vNext.Point) |  | geographic coordinates (latitude, longtitude). |
+| address | [Address](#supply.common.vNext.Address) |  | description, state and zip code are optional, rest are mandatory. |
+| free_text | [string](#string) |  | Place name or street address in a free text format. |
 
 
 
@@ -158,9 +159,9 @@
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| name | [string](#string) |  | Full name of the passenger |
-| phone_number | [string](#string) |  | Phone number in full international format |
-| photo_url | [string](#string) |  | Optional URL |
+| name | [string](#string) |  | Full name of the passenger. |
+| phone_number | [string](#string) |  | Phone number in full international format. |
+| photo_url | [string](#string) |  | Optional URL. |
 
 
 
@@ -175,8 +176,8 @@
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| lat | [double](#double) |  | Latitude |
-| lng | [double](#double) |  | Longtitude |
+| lat | [double](#double) |  | Latitude. |
+| lng | [double](#double) |  | Latitude. |
 
 
 
@@ -194,7 +195,27 @@
 | fixed | [uint64](#uint64) |  | Amount in cents. Fixed price means a price which the supplier commits to in advance. |
 | lower_bound | [uint64](#uint64) |  | Amount in cents. Lower bound of an estimated price. |
 | upper_bound | [uint64](#uint64) |  | Amount in cents. Lower bound of an estimated price. |
-| currency | [string](#string) |  | ISO 4217 code |
+| currency | [string](#string) |  | ISO 4217 code. |
+
+
+
+
+
+
+<a name="supply.common.vNext.Supplier"/>
+
+### Supplier
+Ride supplier details
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| supplier_id | [string](#string) |  | A unique supplier ID. |
+| english_name | [string](#string) |  | The name of the supplier, in English. |
+| local_name | [string](#string) |  | Optional. The name of the supplier in the local language. |
+| logo_url | [string](#string) |  | Optional. A URL pointing to a logo image for the supplier. |
+| phone_number | [string](#string) |  | The supplier’s telephone number. |
+| website_url | [string](#string) |  | URL of the supplier’s website. |
 
 
 
@@ -209,7 +230,7 @@
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| seconds_since_epoch | [uint64](#uint64) |  | Seconds since epoch UTC |
+| seconds_since_epoch | [uint64](#uint64) |  | Seconds since epoch UTC. |
 
 
 
@@ -224,17 +245,17 @@ Vehicle details
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| license_plate_number | [string](#string) |  | The vehicle’s license plate number |
-| vehicle_type | [Vehicle.VehicleType](#supply.common.vNext.Vehicle.VehicleType) |  | The vehicle type (standard, limo, van) |
-| make | [string](#string) |  | The vehicle make |
-| model | [string](#string) |  | The vehicle model |
-| color | [string](#string) |  | The vehicle color |
+| license_plate_number | [string](#string) |  | The vehicle’s license plate number. |
+| vehicle_type | [Vehicle.VehicleType](#supply.common.vNext.Vehicle.VehicleType) |  | The vehicle type (standard, limo, van). |
+| make | [string](#string) |  | The vehicle make. |
+| model | [string](#string) |  | The vehicle model. |
+| color | [string](#string) |  | The vehicle color. |
 
 
 
 
 
- 
+
 
 
 <a name="supply.common.vNext.EnvironmentType"/>
@@ -258,18 +279,18 @@ Vehicle details
 
 | Name | Number | Description |
 | ---- | ------ | ----------- |
-| UNKNOWN | 0 | Default value - unknown vehicle type |
-| STANDARD | 1 | Standard vehicle |
-| LIMO | 2 | Limousine |
-| VAN | 3 | Van |
-| OTHER | 4 | Other known type - not specified |
+| UNKNOWN | 0 | Default value - unknown vehicle type. |
+| STANDARD | 1 | Standard vehicle. |
+| LIMO | 2 | Limousine. |
+| VAN | 3 | Van. |
+| OTHER | 4 | Other known type - not specified. |
 
 
- 
 
- 
 
- 
+
+
+
 
 
 
@@ -288,9 +309,12 @@ Vehicle details
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| supplier_id | [string](#string) |  | Marketplace if of the supplier for which we want to create the ride |
-| ride_id | [string](#string) |  | Marketplace generated ride id which will be used to identify this ride |
-| ride_details | [SimpleRideDetails](#supply.rides.vNext.SimpleRideDetails) |  | Details of the ride creation request |
+| supplier_id | [string](#string) |  | Marketplace if of the supplier for which we want to create the ride. |
+| ride_id | [string](#string) |  | Marketplace generated ride id which will be used to identify this ride. |
+| ride_details | [SimpleRideDetails](#supply.rides.vNext.SimpleRideDetails) |  | Details of the ride creation request. |
+| demander_id | [string](#string) |  | additional fields for reporting and GDPR functionality. |
+| demander_user_id | [string](#string) |  |  |
+| demander_product_id | [string](#string) |  |  |
 | environment_type | [supply.common.vNext.EnvironmentType](#supply.common.vNext.EnvironmentType) |  | Environment type. Generated per ride by the marketplace, and must be returned by dispatcher in all updates to the ride. |
 
 
@@ -307,8 +331,8 @@ Vehicle details
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | accepted_and_looking_for_driver | [bool](#bool) |  | Return true if ride was accepted and supplier is looking for a driver, or false if the ride is rejected. This call should return quickly and not wait for human confirmation. |
-| pickup_eta | [supply.common.vNext.UnixTime](#supply.common.vNext.UnixTime) |  | Estimated time of arrival to pickup |
-| booking_estimated_price | [supply.common.vNext.Price](#supply.common.vNext.Price) |  | Estimated price |
+| pickup_eta | [supply.common.vNext.UnixTime](#supply.common.vNext.UnixTime) |  | Estimated time of arrival to pickup. |
+| booking_estimated_price | [supply.common.vNext.Price](#supply.common.vNext.Price) |  | Estimated price. |
 
 
 
@@ -323,9 +347,9 @@ Vehicle details
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| supplier_id | [string](#string) |  | Marketplace generated supplier id |
-| ride_id | [string](#string) |  | Marketplace generated ride id |
-| cancel_reason | [string](#string) |  | Cancellation reason |
+| supplier_id | [string](#string) |  | Marketplace generated supplier id. |
+| ride_id | [string](#string) |  | Marketplace generated ride id. |
+| cancel_reason | [string](#string) |  | Cancellation reason. |
 | environment_type | [supply.common.vNext.EnvironmentType](#supply.common.vNext.EnvironmentType) |  | Environment type. Generated per ride by the marketplace, and must be returned by dispatcher in all updates to the ride. |
 
 
@@ -341,8 +365,8 @@ Vehicle details
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| cancel_accepted | [bool](#bool) |  | true if cancellation went through, false it if ride cannot be cancelled. TBD: cancel and pay fee |
-| cancel_reason | [string](#string) |  | in case cancellation failed, a textual reason explaining the cause |
+| cancel_accepted | [bool](#bool) |  | true if cancellation went through, false it if ride cannot be cancelled. TBD: cancel and pay fee. |
+| cancel_reason | [string](#string) |  | in case cancellation failed, a textual reason explaining the cause. |
 
 
 
@@ -357,8 +381,8 @@ Vehicle details
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| supplier_id | [string](#string) |  | Marketplace generated supplier id |
-| ride_id | [string](#string) |  | Marketplace generated ride id |
+| supplier_id | [string](#string) |  | Marketplace generated supplier id. |
+| ride_id | [string](#string) |  | Marketplace generated ride id. |
 | environment_type | [supply.common.vNext.EnvironmentType](#supply.common.vNext.EnvironmentType) |  | Environment type. Generated per ride by the marketplace, and must be returned by dispatcher in all updates to the ride. |
 
 
@@ -374,12 +398,12 @@ Vehicle details
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| request_id | [string](#string) |  | Unique request id generated by the markeplace |
-| supplier_id | [string](#string) |  | Marketplace ID of the supplier from which we want offers |
-| pickup | [supply.common.vNext.Location](#supply.common.vNext.Location) |  | Origin of the ride (pickup location) |
-| destination | [supply.common.vNext.Location](#supply.common.vNext.Location) |  | Destination of the ride (dropoff location) |
-| constraints | [SimpleRideBookingConstraints](#supply.rides.vNext.SimpleRideBookingConstraints) |  | Constraints represent the requested ride parameters |
-| pickup_time | [supply.common.vNext.UnixTime](#supply.common.vNext.UnixTime) |  | Pickup time |
+| request_id | [string](#string) |  | Unique request id generated by the markeplace. |
+| supplier_id | [string](#string) |  | Marketplace ID of the supplier from which we want offers. |
+| pickup | [supply.common.vNext.Location](#supply.common.vNext.Location) |  | Origin of the ride (pickup location). |
+| destination | [supply.common.vNext.Location](#supply.common.vNext.Location) |  | Destination of the ride (dropoff location). |
+| constraints | [SimpleRideBookingConstraints](#supply.rides.vNext.SimpleRideBookingConstraints) |  | Constraints represent the requested ride parameters. |
+| pickup_time | [supply.common.vNext.UnixTime](#supply.common.vNext.UnixTime) |  | Pickup time. |
 | environment_type | [supply.common.vNext.EnvironmentType](#supply.common.vNext.EnvironmentType) |  | Environment type. Generated per ride by the marketplace, and must be returned by dispatcher in all updates to the ride. |
 
 
@@ -395,12 +419,14 @@ Vehicle details
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| supplier_id | [string](#string) |  | Marketplace generated supplier id |
-| ride_id | [string](#string) |  | Marketplace generated ride id |
-| eta_to_pickup | [supply.common.vNext.UnixTime](#supply.common.vNext.UnixTime) |  | Updated estimated time till pickup |
-| eta_to_destination | [supply.common.vNext.UnixTime](#supply.common.vNext.UnixTime) |  | Updated estimated time till destination |
-| update_id | [string](#string) |  | Dispatcher-generated id which uniquely identifies this update |
-| update_ts | [google.protobuf.Timestamp](#google.protobuf.Timestamp) |  | Dispatcher-generated timestamp which identifies the update time |
+| supplier_id | [string](#string) |  | Marketplace generated supplier id. |
+| ride_id | [string](#string) |  | Marketplace generated ride id. |
+| eta_to_pickup | [supply.common.vNext.UnixTime](#supply.common.vNext.UnixTime) |  | Updated estimated time till pickup. NOTE: DEPRECATED soon - please use eta_to_pickup_seconds. |
+| eta_to_destination | [supply.common.vNext.UnixTime](#supply.common.vNext.UnixTime) |  | Updated estimated time till destination. NOTE: DEPRECATED soon - please use eta_to_destination_seconds. |
+| eta_to_pickup_seconds | [google.protobuf.UInt32Value](#google.protobuf.UInt32Value) |  | Updated estimated time till pickup in seconds. absolute time. |
+| eta_to_destination_seconds | [google.protobuf.UInt32Value](#google.protobuf.UInt32Value) |  | Updated estimated time till destination in seconds. absolute time. |
+| update_id | [string](#string) |  | Dispatcher-generated id which uniquely identifies this update. |
+| update_ts | [google.protobuf.Timestamp](#google.protobuf.Timestamp) |  | Dispatcher-generated timestamp which identifies the update time. |
 | environment_type | [supply.common.vNext.EnvironmentType](#supply.common.vNext.EnvironmentType) |  | Environment type. Generated per ride by the marketplace, and must be returned by dispatcher in all updates to the ride. |
 
 
@@ -416,11 +442,11 @@ Vehicle details
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| supplier_id | [string](#string) |  | Marketplace generated supplier id |
-| ride_id | [string](#string) |  | Marketplace generated ride id |
-| current_location | [supply.common.vNext.Point](#supply.common.vNext.Point) |  | Updated location of the vehicle |
-| update_id | [string](#string) |  | Dispatcher-generated id which uniquely identifies this update |
-| update_ts | [google.protobuf.Timestamp](#google.protobuf.Timestamp) |  | Dispatcher-generated timestamp which identifies the update time |
+| supplier_id | [string](#string) |  | Marketplace generated supplier id. |
+| ride_id | [string](#string) |  | Marketplace generated ride id. |
+| current_location | [supply.common.vNext.Point](#supply.common.vNext.Point) |  | Updated location of the vehicle. |
+| update_id | [string](#string) |  | Dispatcher-generated id which uniquely identifies this update. |
+| update_ts | [google.protobuf.Timestamp](#google.protobuf.Timestamp) |  | Dispatcher-generated timestamp which identifies the update time. |
 | environment_type | [supply.common.vNext.EnvironmentType](#supply.common.vNext.EnvironmentType) |  | Environment type. Generated per ride by the marketplace, and must be returned by dispatcher in all updates to the ride. |
 
 
@@ -436,15 +462,17 @@ Vehicle details
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| supplier_id | [string](#string) |  | Marketplace generated supplier id |
-| ride_id | [string](#string) |  | Marketplace generated ride id |
-| pickup | [supply.common.vNext.Location](#supply.common.vNext.Location) |  | Updated pickup location |
-| destination | [supply.common.vNext.Location](#supply.common.vNext.Location) |  | Updated destination location |
-| eta_to_pickup | [supply.common.vNext.UnixTime](#supply.common.vNext.UnixTime) |  | Updated estimated time of arrival to pickup |
-| eta_to_destination | [supply.common.vNext.UnixTime](#supply.common.vNext.UnixTime) |  | Updated estimated time of arrival to destination |
-| update_id | [string](#string) |  | Dispatcher-generated id which uniquely identifies this update |
-| update_ts | [google.protobuf.Timestamp](#google.protobuf.Timestamp) |  | Dispatcher-generated timestamp which identifies the update time |
+| supplier_id | [string](#string) |  | Marketplace generated supplier id. |
+| ride_id | [string](#string) |  | Marketplace generated ride id. |
+| pickup | [supply.common.vNext.Location](#supply.common.vNext.Location) |  | Updated pickup location. |
+| destination | [supply.common.vNext.Location](#supply.common.vNext.Location) |  | Updated destination location. |
+| eta_to_pickup | [supply.common.vNext.UnixTime](#supply.common.vNext.UnixTime) |  | Updated estimated time of arrival to pickup. NOTE: This field will be deprecated soon, please use eta_to_pickup_seconds instead. |
+| eta_to_destination | [supply.common.vNext.UnixTime](#supply.common.vNext.UnixTime) |  | Updated estimated time of arrival to destination NOTE: This field will be deprecated soon, please use eta_to_destination_seconds instead. |
+| update_id | [string](#string) |  | Dispatcher-generated id which uniquely identifies this update. |
+| update_ts | [google.protobuf.Timestamp](#google.protobuf.Timestamp) |  | Dispatcher-generated timestamp which identifies the update time. |
 | environment_type | [supply.common.vNext.EnvironmentType](#supply.common.vNext.EnvironmentType) |  | Environment type. Generated per ride by the marketplace, and must be returned by dispatcher in all updates to the ride. |
+| eta_to_pickup_seconds | [google.protobuf.UInt32Value](#google.protobuf.UInt32Value) |  | Updated estimated time till pickup in seconds. absolute time. |
+| eta_to_destination_seconds | [google.protobuf.UInt32Value](#google.protobuf.UInt32Value) |  | Updated estimated time till destination in seconds. absolute time. |
 
 
 
@@ -459,12 +487,12 @@ Vehicle details
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| supplier_id | [string](#string) |  | Marketplace generated supplier id |
-| ride_id | [string](#string) |  | Marketplace generated ride id |
-| booking_estimated_price | [supply.common.vNext.Price](#supply.common.vNext.Price) |  | Updated estimated price |
-| actual_price | [supply.common.vNext.Price](#supply.common.vNext.Price) |  | Updated actual price of the ride |
-| update_id | [string](#string) |  | Dispatcher-generated id which uniquely identifies this update |
-| update_ts | [google.protobuf.Timestamp](#google.protobuf.Timestamp) |  | Dispatcher-generated timestamp which identifies the update time |
+| supplier_id | [string](#string) |  | Marketplace generated supplier id. |
+| ride_id | [string](#string) |  | Marketplace generated ride id. |
+| booking_estimated_price | [supply.common.vNext.Price](#supply.common.vNext.Price) |  | Updated estimated price. |
+| actual_price | [supply.common.vNext.Price](#supply.common.vNext.Price) |  | Updated actual price of the ride. |
+| update_id | [string](#string) |  | Dispatcher-generated id which uniquely identifies this update. |
+| update_ts | [google.protobuf.Timestamp](#google.protobuf.Timestamp) |  | Dispatcher-generated timestamp which identifies the update time. |
 | environment_type | [supply.common.vNext.EnvironmentType](#supply.common.vNext.EnvironmentType) |  | Environment type. Generated per ride by the marketplace, and must be returned by dispatcher in all updates to the ride. |
 
 
@@ -480,11 +508,11 @@ Vehicle details
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| supplier_id | [string](#string) |  | Marketplace generated supplier id |
-| ride_id | [string](#string) |  | Marketplace generated ride id |
-| prebook_pickup_time | [supply.common.vNext.UnixTime](#supply.common.vNext.UnixTime) |  | New requested pickup time form the supplier |
-| update_id | [string](#string) |  | Dispatcher-generated id which uniquely identifies this update |
-| update_ts | [google.protobuf.Timestamp](#google.protobuf.Timestamp) |  | Dispatcher-generated timestamp which identifies the update time |
+| supplier_id | [string](#string) |  | Marketplace generated supplier id. |
+| ride_id | [string](#string) |  | Marketplace generated ride id. |
+| prebook_pickup_time | [supply.common.vNext.UnixTime](#supply.common.vNext.UnixTime) |  | New requested pickup time form the supplier. |
+| update_id | [string](#string) |  | Dispatcher-generated id which uniquely identifies this update. |
+| update_ts | [google.protobuf.Timestamp](#google.protobuf.Timestamp) |  | Dispatcher-generated timestamp which identifies the update time. |
 | environment_type | [supply.common.vNext.EnvironmentType](#supply.common.vNext.EnvironmentType) |  | Environment type. Generated per ride by the marketplace, and must be returned by dispatcher in all updates to the ride. |
 
 
@@ -500,12 +528,12 @@ Vehicle details
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| supplier_id | [string](#string) |  | Marketplace generated supplier id |
-| ride_id | [string](#string) |  | Marketplace generated ride id |
-| vehicle | [supply.common.vNext.Vehicle](#supply.common.vNext.Vehicle) |  | Updated vehicle |
-| driver | [supply.common.vNext.DriverDetails](#supply.common.vNext.DriverDetails) |  | Updated driver |
-| update_id | [string](#string) |  | Dispatcher-generated id which uniquely identifies this update |
-| update_ts | [google.protobuf.Timestamp](#google.protobuf.Timestamp) |  | Dispatcher-generated timestamp which identifies the update time |
+| supplier_id | [string](#string) |  | Marketplace generated supplier id. |
+| ride_id | [string](#string) |  | Marketplace generated ride id. |
+| vehicle | [supply.common.vNext.Vehicle](#supply.common.vNext.Vehicle) |  | Updated vehicle. |
+| driver | [supply.common.vNext.DriverDetails](#supply.common.vNext.DriverDetails) |  | Updated driver. |
+| update_id | [string](#string) |  | Dispatcher-generated id which uniquely identifies this update. |
+| update_ts | [google.protobuf.Timestamp](#google.protobuf.Timestamp) |  | Dispatcher-generated timestamp which identifies the update time. |
 | environment_type | [supply.common.vNext.EnvironmentType](#supply.common.vNext.EnvironmentType) |  | Environment type. Generated per ride by the marketplace, and must be returned by dispatcher in all updates to the ride. |
 
 
@@ -521,8 +549,8 @@ Vehicle details
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| passengers_no | [uint32](#uint32) |  | Number of pasengers |
-| suitcases_no | [uint32](#uint32) |  | Number of suitcases |
+| passengers_no | [uint32](#uint32) |  | Number of pasengers. |
+| suitcases_no | [uint32](#uint32) |  | Number of suitcases. |
 
 
 
@@ -537,13 +565,13 @@ Vehicle details
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| pickup | [supply.common.vNext.Location](#supply.common.vNext.Location) |  | Origin of the ride |
-| destination | [supply.common.vNext.Location](#supply.common.vNext.Location) |  | Destination of the ride |
-| constraints | [SimpleRideBookingConstraints](#supply.rides.vNext.SimpleRideBookingConstraints) |  | Special requests of the client |
-| passenger_details | [supply.common.vNext.PassengerDetails](#supply.common.vNext.PassengerDetails) |  | Details of the passenger |
-| pickup_time | [supply.common.vNext.UnixTime](#supply.common.vNext.UnixTime) |  | Requested pickuo time |
-| passenger_note | [string](#string) |  | Free-text comments by the passanger |
-| dispatcher_offer_id | [string](#string) |  | Supplier generated unique offer ID. See SimpleRideOffer |
+| pickup | [supply.common.vNext.Location](#supply.common.vNext.Location) |  | Origin of the ride. |
+| destination | [supply.common.vNext.Location](#supply.common.vNext.Location) |  | Destination of the ride. |
+| constraints | [SimpleRideBookingConstraints](#supply.rides.vNext.SimpleRideBookingConstraints) |  | Special requests of the client. |
+| passenger_details | [supply.common.vNext.PassengerDetails](#supply.common.vNext.PassengerDetails) |  | Details of the passenger. |
+| pickup_time | [supply.common.vNext.UnixTime](#supply.common.vNext.UnixTime) |  | Requested pickuo time. |
+| passenger_note | [string](#string) |  | Free-text comments by the passanger. |
+| dispatcher_offer_id | [string](#string) |  | Supplier generated unique offer ID. See SimpleRideOffer. |
 
 
 
@@ -558,10 +586,12 @@ Vehicle details
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| dispatcher_offer_id | [string](#string) |  | Supplier generated unique offer ID. Relevant only for selectable offers |
-| pickup_eta | [supply.common.vNext.UnixTime](#supply.common.vNext.UnixTime) |  | Estimated pickup time |
-| dropoff_eta | [supply.common.vNext.UnixTime](#supply.common.vNext.UnixTime) |  | Estimated dropoff time |
-| booking_estimated_price | [supply.common.vNext.Price](#supply.common.vNext.Price) |  | Estimated price |
+| dispatcher_offer_id | [string](#string) |  | Supplier generated unique offer ID. Relevant only for selectable offers. |
+| pickup_eta | [supply.common.vNext.UnixTime](#supply.common.vNext.UnixTime) |  | Estimated pickup time. NOTE: This field will be deprecated soon. please use pickup_eta_seconds instead. |
+| dropoff_eta | [supply.common.vNext.UnixTime](#supply.common.vNext.UnixTime) |  | Estimated dropoff time. NOTE: This field will be deprecated soon. please use estimated_ride_duration_seconds instead. |
+| booking_estimated_price | [supply.common.vNext.Price](#supply.common.vNext.Price) |  | Estimated price. |
+| pickup_eta_seconds | [google.protobuf.UInt32Value](#google.protobuf.UInt32Value) |  | Estimated pickup time in seconds. absolute time. |
+| estimated_ride_duration_seconds | [google.protobuf.UInt32Value](#google.protobuf.UInt32Value) |  | Estimated dropoff time in seconds. absolute time. This is the time between pickup to dropoff. It does not contain the time to pickup. |
 
 
 
@@ -576,9 +606,10 @@ Vehicle details
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| request_id | [string](#string) |  | Set to the request_id received in the original GetSimpleRideOffersRequest |
-| is_selectable | [bool](#bool) |  | An offer is selectable if during ride creation, demander can ask for this specific offer to be used to create the ride |
-| offers | [SimpleRideOffer](#supply.rides.vNext.SimpleRideOffer) | repeated | A set of offers |
+| request_id | [string](#string) |  | Set to the request_id received in the original GetSimpleRideOffersRequest. |
+| is_selectable | [bool](#bool) |  | An offer is selectable if during ride creation, demander can ask for this specific offer to be used to create the ride. |
+| offers | [SimpleRideOffer](#supply.rides.vNext.SimpleRideOffer) | repeated | A set of offers. |
+| supplier | [supply.common.vNext.Supplier](#supply.common.vNext.Supplier) |  | Details of the supplier. Given for aggregate suppliers. |
 
 
 
@@ -593,11 +624,11 @@ Vehicle details
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| supplier_id | [string](#string) |  | Marketplace generated supplier id |
-| ride_id | [string](#string) |  | Marketplace generated ride id |
-| cancel_reason | [string](#string) |  | Cancellation reason |
-| update_id | [string](#string) |  | Dispatcher-generated id which uniquely identifies this update |
-| update_ts | [google.protobuf.Timestamp](#google.protobuf.Timestamp) |  | Dispatcher-generated timestamp which identifies the update time |
+| supplier_id | [string](#string) |  | Marketplace generated supplier id. |
+| ride_id | [string](#string) |  | Marketplace generated ride id. |
+| cancel_reason | [string](#string) |  | Cancellation reason. |
+| update_id | [string](#string) |  | Dispatcher-generated id which uniquely identifies this update. |
+| update_ts | [google.protobuf.Timestamp](#google.protobuf.Timestamp) |  | Dispatcher-generated timestamp which identifies the update time. |
 | environment_type | [supply.common.vNext.EnvironmentType](#supply.common.vNext.EnvironmentType) |  | Environment type. Generated per ride by the marketplace, and must be returned by dispatcher in all updates to the ride. |
 
 
@@ -613,10 +644,10 @@ Vehicle details
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| supplier_id | [string](#string) |  | Marketplace generated supplier id |
-| ride_id | [string](#string) |  | Marketplace generated ride id |
-| status_code | [SupplierRideStatus.RideStatus](#supply.rides.vNext.SupplierRideStatus.RideStatus) |  | Current status of te ride |
-| status_information | [string](#string) |  | Additional information regarding the current state |
+| supplier_id | [string](#string) |  | Marketplace generated supplier id. |
+| ride_id | [string](#string) |  | Marketplace generated ride id. |
+| status_code | [SupplierRideStatus.RideStatus](#supply.rides.vNext.SupplierRideStatus.RideStatus) |  | Current status of te ride. |
+| status_information | [string](#string) |  | Additional information regarding the current state. |
 
 
 
@@ -631,56 +662,56 @@ Vehicle details
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| supplier_id | [string](#string) |  | Marketplace generated supplier id |
-| ride_id | [string](#string) |  | Marketplace generated ride id |
-| status_code | [SupplierRideStatusUpdate.RideStatus](#supply.rides.vNext.SupplierRideStatusUpdate.RideStatus) |  | Current status of te ride |
-| status_information | [string](#string) |  | Additional information regarding the current state |
-| update_id | [string](#string) |  | Dispatcher-generated id which uniquely identifies this update |
-| update_ts | [google.protobuf.Timestamp](#google.protobuf.Timestamp) |  | Dispatcher-generated timestamp which identifies the update time |
+| supplier_id | [string](#string) |  | Marketplace generated supplier id. |
+| ride_id | [string](#string) |  | Marketplace generated ride id. |
+| status_code | [SupplierRideStatusUpdate.RideStatus](#supply.rides.vNext.SupplierRideStatusUpdate.RideStatus) |  | Current status of te ride. |
+| status_information | [string](#string) |  | Additional information regarding the current state. |
+| update_id | [string](#string) |  | Dispatcher-generated id which uniquely identifies this update. |
+| update_ts | [google.protobuf.Timestamp](#google.protobuf.Timestamp) |  | Dispatcher-generated timestamp which identifies the update time. |
 | environment_type | [supply.common.vNext.EnvironmentType](#supply.common.vNext.EnvironmentType) |  | Environment type. Generated per ride by the marketplace, and must be returned by dispatcher in all updates to the ride. |
 
 
 
 
 
- 
+
 
 
 <a name="supply.rides.vNext.SupplierRideStatus.RideStatus"/>
 
 ### SupplierRideStatus.RideStatus
-RideStatus represents the different statuses a ride can be at
+RideStatus represents the different statuses a ride can be at.
 
 | Name | Number | Description |
 | ---- | ------ | ----------- |
-| UNKNOWN | 0 | Status is unknown |
+| UNKNOWN | 0 | Status is unknown. |
 | REJECTED | 8 |  |
-| ACCEPTED | 1 | Supplier confirmed the ride, but driver is not yet allocated |
-| DRIVER_ASSIGNED | 2 | Driver is allocated, but ride has not yet started |
-| DRIVER_EN_ROUTE | 3 | Drive started and driver is en-route |
-| AT_PICKUP | 4 | Driver is arrived at the pickup point, but passenger is not yet on board |
-| PASSANGER_ON_BOARD | 5 | Passenger is on board and drive to destination starterd |
-| COMPLETED | 6 | Ride complete and passenger disembarked |
-| CANCELED | 7 | Ride is cancelled (due to supplier or due to demander) |
+| ACCEPTED | 1 | Supplier confirmed the ride, but driver is not yet allocated. |
+| DRIVER_ASSIGNED | 2 | Driver is allocated, but ride has not yet started. |
+| DRIVER_EN_ROUTE | 3 | Drive started and driver is en-route. |
+| AT_PICKUP | 4 | Driver is arrived at the pickup point, but passenger is not yet on board. |
+| PASSANGER_ON_BOARD | 5 | Passenger is on board and drive to destination starterd. |
+| COMPLETED | 6 | Ride complete and passenger disembarked. |
+| CANCELED | 7 | Ride is cancelled (due to supplier or due to demander). |
 
 
 
 <a name="supply.rides.vNext.SupplierRideStatusUpdate.RideStatus"/>
 
 ### SupplierRideStatusUpdate.RideStatus
-RideStatus represents the different statuses a ride can be at
+RideStatus represents the different statuses a ride can be at.
 
 | Name | Number | Description |
 | ---- | ------ | ----------- |
-| UNKNOWN | 0 | Status is unknown |
+| UNKNOWN | 0 | Status is unknown. |
 | REJECTED | 8 |  |
-| ACCEPTED | 1 | Supplier confirmed the ride, but driver is not yet allocated |
-| DRIVER_ASSIGNED | 2 | Driver is allocated, but ride has not yet started |
-| DRIVER_EN_ROUTE | 3 | Drive started and driver is en-route |
-| AT_PICKUP | 4 | Driver is arrived at the pickup point, but passenger is not yet on board |
-| PASSANGER_ON_BOARD | 5 | Passenger is on board and drive to destination starterd |
-| COMPLETED | 6 | Ride complete and passenger disembarked |
-| CANCELED | 7 | Ride is cancelled (due to supplier or due to demander) |
+| ACCEPTED | 1 | Supplier confirmed the ride, but driver is not yet allocated. |
+| DRIVER_ASSIGNED | 2 | Driver is allocated, but ride has not yet started. |
+| DRIVER_EN_ROUTE | 3 | Drive started and driver is en-route. |
+| AT_PICKUP | 4 | Driver is arrived at the pickup point, but passenger is not yet on board. |
+| PASSANGER_ON_BOARD | 5 | Passenger is on board and drive to destination starterd. |
+| COMPLETED | 6 | Ride complete and passenger disembarked. |
+| CANCELED | 7 | Ride is cancelled (due to supplier or due to demander). |
 
 
  
