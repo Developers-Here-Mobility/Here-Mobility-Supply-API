@@ -3,83 +3,86 @@
 
 ## Table of Contents
 
-- [marketplace/public/grpc/supply_handler/vNext/gen-doc/supply_handler_common.proto](#marketplace/public/grpc/supply_handler/vNext/gen-doc/supply_handler_common.proto)
-    - [Address](#supply.common.vNext.Address)
-    - [DriverDetails](#supply.common.vNext.DriverDetails)
-    - [Empty](#supply.common.vNext.Empty)
-    - [Location](#supply.common.vNext.Location)
-    - [PassengerDetails](#supply.common.vNext.PassengerDetails)
-    - [Point](#supply.common.vNext.Point)
-    - [Price](#supply.common.vNext.Price)
-    - [Supplier](#supply.common.vNext.Supplier)
-    - [UnixTime](#supply.common.vNext.UnixTime)
-    - [Vehicle](#supply.common.vNext.Vehicle)
+- [marketplace/public/grpc/supply_handler/v1/gen-doc/supply_handler_common.proto](#marketplace/public/grpc/supply_handler/v1/gen-doc/supply_handler_common.proto)
+    - [Address](#supply.common.v1.Address)
+    - [DriverDetails](#supply.common.v1.DriverDetails)
+    - [Empty](#supply.common.v1.Empty)
+    - [Location](#supply.common.v1.Location)
+    - [PassengerDetails](#supply.common.v1.PassengerDetails)
+    - [Place](#supply.common.v1.Place)
+    - [Point](#supply.common.v1.Point)
+    - [Price](#supply.common.v1.Price)
+    - [Supplier](#supply.common.v1.Supplier)
+    - [UnixTime](#supply.common.v1.UnixTime)
+    - [Vehicle](#supply.common.v1.Vehicle)
+  
+    - [EnvironmentType](#supply.common.v1.EnvironmentType)
+    - [Vehicle.VehicleType](#supply.common.v1.Vehicle.VehicleType)
+  
+  
+  
 
-    - [EnvironmentType](#supply.common.vNext.EnvironmentType)
-    - [Vehicle.VehicleType](#supply.common.vNext.Vehicle.VehicleType)
+- [marketplace/public/grpc/supply_handler/v1/gen-doc/supply_handler_rides_messages.proto](#marketplace/public/grpc/supply_handler/v1/gen-doc/supply_handler_rides_messages.proto)
+    - [CreateSimpleRideRequest](#supply.rides.v1.CreateSimpleRideRequest)
+    - [CreateSimpleRideResponse](#supply.rides.v1.CreateSimpleRideResponse)
+    - [DemanderCancelRideRequest](#supply.rides.v1.DemanderCancelRideRequest)
+    - [DemanderCancelRideResponse](#supply.rides.v1.DemanderCancelRideResponse)
+    - [GetRideStatusRequest](#supply.rides.v1.GetRideStatusRequest)
+    - [GetSimpleRideOffersRequest](#supply.rides.v1.GetSimpleRideOffersRequest)
+    - [RideEtaUpdate](#supply.rides.v1.RideEtaUpdate)
+    - [RideLocationUpdate](#supply.rides.v1.RideLocationUpdate)
+    - [RidePickupAndDestinationUpdate](#supply.rides.v1.RidePickupAndDestinationUpdate)
+    - [RidePriceUpdate](#supply.rides.v1.RidePriceUpdate)
+    - [RideRequestedPickupTimeUpdate](#supply.rides.v1.RideRequestedPickupTimeUpdate)
+    - [RideVehicleAndDriverUpdate](#supply.rides.v1.RideVehicleAndDriverUpdate)
+    - [SimpleRideBookingConstraints](#supply.rides.v1.SimpleRideBookingConstraints)
+    - [SimpleRideDetails](#supply.rides.v1.SimpleRideDetails)
+    - [SimpleRideOffer](#supply.rides.v1.SimpleRideOffer)
+    - [SimpleRideOffers](#supply.rides.v1.SimpleRideOffers)
+    - [SupplierCancelRideRequest](#supply.rides.v1.SupplierCancelRideRequest)
+    - [SupplierRideStatus](#supply.rides.v1.SupplierRideStatus)
+    - [SupplierRideStatusUpdate](#supply.rides.v1.SupplierRideStatusUpdate)
+  
+    - [DemanderCancelRideRequest.PassengerCancelReasonCategory](#supply.rides.v1.DemanderCancelRideRequest.PassengerCancelReasonCategory)
+    - [SupplierCancelRideRequest.SupplierCancelReasonCategory](#supply.rides.v1.SupplierCancelRideRequest.SupplierCancelReasonCategory)
+    - [SupplierRideStatus.RideStatus](#supply.rides.v1.SupplierRideStatus.RideStatus)
+    - [SupplierRideStatusUpdate.RideStatus](#supply.rides.v1.SupplierRideStatusUpdate.RideStatus)
+  
+  
+  
 
+- [marketplace/public/grpc/supply_handler/v1/gen-doc/supply_handler_rides_service.proto](#marketplace/public/grpc/supply_handler/v1/gen-doc/supply_handler_rides_service.proto)
+  
+  
+  
+    - [RidesDispatchApi](#supply.rides.v1.RidesDispatchApi)
+    - [RidesSupplyApi](#supply.rides.v1.RidesSupplyApi)
+  
 
+- [marketplace/public/grpc/supply_handler/v1/gen-doc/supply_handler_shared_rides_messages.proto](#marketplace/public/grpc/supply_handler/v1/gen-doc/supply_handler_shared_rides_messages.proto)
+  
+  
+  
+  
 
-
-- [marketplace/public/grpc/supply_handler/vNext/gen-doc/supply_handler_rides_messages.proto](#marketplace/public/grpc/supply_handler/vNext/gen-doc/supply_handler_rides_messages.proto)
-    - [CreateSimpleRideRequest](#supply.rides.vNext.CreateSimpleRideRequest)
-    - [CreateSimpleRideResponse](#supply.rides.vNext.CreateSimpleRideResponse)
-    - [DemanderCancelRideRequest](#supply.rides.vNext.DemanderCancelRideRequest)
-    - [DemanderCancelRideResponse](#supply.rides.vNext.DemanderCancelRideResponse)
-    - [GetRideStatusRequest](#supply.rides.vNext.GetRideStatusRequest)
-    - [GetSimpleRideOffersRequest](#supply.rides.vNext.GetSimpleRideOffersRequest)
-    - [RideEtaUpdate](#supply.rides.vNext.RideEtaUpdate)
-    - [RideLocationUpdate](#supply.rides.vNext.RideLocationUpdate)
-    - [RidePickupAndDestinationUpdate](#supply.rides.vNext.RidePickupAndDestinationUpdate)
-    - [RidePriceUpdate](#supply.rides.vNext.RidePriceUpdate)
-    - [RideRequestedPickupTimeUpdate](#supply.rides.vNext.RideRequestedPickupTimeUpdate)
-    - [RideVehicleAndDriverUpdate](#supply.rides.vNext.RideVehicleAndDriverUpdate)
-    - [SimpleRideBookingConstraints](#supply.rides.vNext.SimpleRideBookingConstraints)
-    - [SimpleRideDetails](#supply.rides.vNext.SimpleRideDetails)
-    - [SimpleRideOffer](#supply.rides.vNext.SimpleRideOffer)
-    - [SimpleRideOffers](#supply.rides.vNext.SimpleRideOffers)
-    - [SupplierCancelRideRequest](#supply.rides.vNext.SupplierCancelRideRequest)
-    - [SupplierRideStatus](#supply.rides.vNext.SupplierRideStatus)
-    - [SupplierRideStatusUpdate](#supply.rides.vNext.SupplierRideStatusUpdate)
-
-    - [SupplierRideStatus.RideStatus](#supply.rides.vNext.SupplierRideStatus.RideStatus)
-    - [SupplierRideStatusUpdate.RideStatus](#supply.rides.vNext.SupplierRideStatusUpdate.RideStatus)
-
-
-
-
-- [marketplace/public/grpc/supply_handler/vNext/gen-doc/supply_handler_rides_service.proto](#marketplace/public/grpc/supply_handler/vNext/gen-doc/supply_handler_rides_service.proto)
-
-
-
-    - [RidesDispatchApi](#supply.rides.vNext.RidesDispatchApi)
-    - [RidesSupplyApi](#supply.rides.vNext.RidesSupplyApi)
-
-
-- [marketplace/public/grpc/supply_handler/vNext/gen-doc/supply_handler_shared_rides_messages.proto](#marketplace/public/grpc/supply_handler/vNext/gen-doc/supply_handler_shared_rides_messages.proto)
-
-
-
-
-
-- [marketplace/public/grpc/supply_handler/vNext/gen-doc/supply_handler_shared_rides_service.proto](#marketplace/public/grpc/supply_handler/vNext/gen-doc/supply_handler_shared_rides_service.proto)
-
-
-
-
+- [marketplace/public/grpc/supply_handler/v1/gen-doc/supply_handler_shared_rides_service.proto](#marketplace/public/grpc/supply_handler/v1/gen-doc/supply_handler_shared_rides_service.proto)
+  
+  
+  
+  
 
 - [Scalar Value Types](#scalar-value-types)
 
 
 
-<a name="marketplace/public/grpc/supply_handler/vNext/gen-doc/supply_handler_common.proto"/>
+<a name="marketplace/public/grpc/supply_handler/v1/gen-doc/supply_handler_common.proto"/>
 <p align="right"><a href="#top">Top</a></p>
 
-## marketplace/public/grpc/supply_handler/vNext/gen-doc/supply_handler_common.proto
+## marketplace/public/grpc/supply_handler/v1/gen-doc/supply_handler_common.proto
 
 
 
-<a name="supply.common.vNext.Address"/>
+<a name="supply.common.v1.Address"/>
 
 ### Address
 
@@ -105,7 +108,7 @@
 
 
 
-<a name="supply.common.vNext.DriverDetails"/>
+<a name="supply.common.v1.DriverDetails"/>
 
 ### DriverDetails
 
@@ -124,7 +127,7 @@
 
 
 
-<a name="supply.common.vNext.Empty"/>
+<a name="supply.common.v1.Empty"/>
 
 ### Empty
 
@@ -134,7 +137,7 @@
 
 
 
-<a name="supply.common.vNext.Location"/>
+<a name="supply.common.v1.Location"/>
 
 ### Location
 
@@ -142,16 +145,17 @@
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| point | [Point](#supply.common.vNext.Point) |  | geographic coordinates (latitude, longtitude). |
-| address | [Address](#supply.common.vNext.Address) |  | description, state and zip code are optional, rest are mandatory. |
-| free_text | [string](#string) |  | Place name or street address in a free text format. |
+| point | [Point](#supply.common.v1.Point) |  | geographic coordinates (latitude, longtitude). |
+| address | [Address](#supply.common.v1.Address) |  | description, state and zip code are optional, rest are mandatory. |
+| place | [Place](#supply.common.v1.Place) |  | Optional. Place information of the location. |
+| free_text | [string](#string) |  | Street address in a free text format. |
 
 
 
 
 
 
-<a name="supply.common.vNext.PassengerDetails"/>
+<a name="supply.common.v1.PassengerDetails"/>
 
 ### PassengerDetails
 
@@ -168,7 +172,23 @@
 
 
 
-<a name="supply.common.vNext.Point"/>
+<a name="supply.common.v1.Place"/>
+
+### Place
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| name | [string](#string) |  | The place name. |
+| category | [string](#string) |  | The place category (e.g.: Airport, Restaurant, Park, etc.). |
+
+
+
+
+
+
+<a name="supply.common.v1.Point"/>
 
 ### Point
 
@@ -184,7 +204,7 @@
 
 
 
-<a name="supply.common.vNext.Price"/>
+<a name="supply.common.v1.Price"/>
 
 ### Price
 
@@ -202,7 +222,7 @@
 
 
 
-<a name="supply.common.vNext.Supplier"/>
+<a name="supply.common.v1.Supplier"/>
 
 ### Supplier
 Ride supplier details
@@ -222,7 +242,7 @@ Ride supplier details
 
 
 
-<a name="supply.common.vNext.UnixTime"/>
+<a name="supply.common.v1.UnixTime"/>
 
 ### UnixTime
 
@@ -237,7 +257,7 @@ Ride supplier details
 
 
 
-<a name="supply.common.vNext.Vehicle"/>
+<a name="supply.common.v1.Vehicle"/>
 
 ### Vehicle
 Vehicle details
@@ -246,7 +266,7 @@ Vehicle details
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | license_plate_number | [string](#string) |  | The vehicle’s license plate number. |
-| vehicle_type | [Vehicle.VehicleType](#supply.common.vNext.Vehicle.VehicleType) |  | The vehicle type (standard, limo, van). |
+| vehicle_type | [Vehicle.VehicleType](#supply.common.v1.Vehicle.VehicleType) |  | The vehicle type (standard, limo, van). |
 | make | [string](#string) |  | The vehicle make. |
 | model | [string](#string) |  | The vehicle model. |
 | color | [string](#string) |  | The vehicle color. |
@@ -255,10 +275,10 @@ Vehicle details
 
 
 
+ 
 
 
-
-<a name="supply.common.vNext.EnvironmentType"/>
+<a name="supply.common.v1.EnvironmentType"/>
 
 ### EnvironmentType
 
@@ -272,7 +292,7 @@ Vehicle details
 
 
 
-<a name="supply.common.vNext.Vehicle.VehicleType"/>
+<a name="supply.common.v1.Vehicle.VehicleType"/>
 
 ### Vehicle.VehicleType
 
@@ -286,22 +306,22 @@ Vehicle details
 | OTHER | 4 | Other known type - not specified. |
 
 
+ 
+
+ 
+
+ 
 
 
 
-
-
-
-
-
-<a name="marketplace/public/grpc/supply_handler/vNext/gen-doc/supply_handler_rides_messages.proto"/>
+<a name="marketplace/public/grpc/supply_handler/v1/gen-doc/supply_handler_rides_messages.proto"/>
 <p align="right"><a href="#top">Top</a></p>
 
-## marketplace/public/grpc/supply_handler/vNext/gen-doc/supply_handler_rides_messages.proto
+## marketplace/public/grpc/supply_handler/v1/gen-doc/supply_handler_rides_messages.proto
 
 
 
-<a name="supply.rides.vNext.CreateSimpleRideRequest"/>
+<a name="supply.rides.v1.CreateSimpleRideRequest"/>
 
 ### CreateSimpleRideRequest
 
@@ -311,18 +331,18 @@ Vehicle details
 | ----- | ---- | ----- | ----------- |
 | supplier_id | [string](#string) |  | Marketplace if of the supplier for which we want to create the ride. |
 | ride_id | [string](#string) |  | Marketplace generated ride id which will be used to identify this ride. |
-| ride_details | [SimpleRideDetails](#supply.rides.vNext.SimpleRideDetails) |  | Details of the ride creation request. |
+| ride_details | [SimpleRideDetails](#supply.rides.v1.SimpleRideDetails) |  | Details of the ride creation request. |
 | demander_id | [string](#string) |  | additional fields for reporting and GDPR functionality. |
 | demander_user_id | [string](#string) |  |  |
 | demander_product_id | [string](#string) |  |  |
-| environment_type | [supply.common.vNext.EnvironmentType](#supply.common.vNext.EnvironmentType) |  | Environment type. Generated per ride by the marketplace, and must be returned by dispatcher in all updates to the ride. |
+| environment_type | [supply.common.v1.EnvironmentType](#supply.common.v1.EnvironmentType) |  | Environment type. Generated per ride by the marketplace, and must be returned by dispatcher in all updates to the ride. |
 
 
 
 
 
 
-<a name="supply.rides.vNext.CreateSimpleRideResponse"/>
+<a name="supply.rides.v1.CreateSimpleRideResponse"/>
 
 ### CreateSimpleRideResponse
 
@@ -331,15 +351,15 @@ Vehicle details
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | accepted_and_looking_for_driver | [bool](#bool) |  | Return true if ride was accepted and supplier is looking for a driver, or false if the ride is rejected. This call should return quickly and not wait for human confirmation. |
-| pickup_eta | [supply.common.vNext.UnixTime](#supply.common.vNext.UnixTime) |  | Estimated time of arrival to pickup. |
-| booking_estimated_price | [supply.common.vNext.Price](#supply.common.vNext.Price) |  | Estimated price. |
+| pickup_eta | [supply.common.v1.UnixTime](#supply.common.v1.UnixTime) |  | Estimated time of arrival to pickup. |
+| booking_estimated_price | [supply.common.v1.Price](#supply.common.v1.Price) |  | Estimated price. |
 
 
 
 
 
 
-<a name="supply.rides.vNext.DemanderCancelRideRequest"/>
+<a name="supply.rides.v1.DemanderCancelRideRequest"/>
 
 ### DemanderCancelRideRequest
 
@@ -350,14 +370,15 @@ Vehicle details
 | supplier_id | [string](#string) |  | Marketplace generated supplier id. |
 | ride_id | [string](#string) |  | Marketplace generated ride id. |
 | cancel_reason | [string](#string) |  | Cancellation reason. |
-| environment_type | [supply.common.vNext.EnvironmentType](#supply.common.vNext.EnvironmentType) |  | Environment type. Generated per ride by the marketplace, and must be returned by dispatcher in all updates to the ride. |
+| cancel_reason_category | [DemanderCancelRideRequest.PassengerCancelReasonCategory](#supply.rides.v1.DemanderCancelRideRequest.PassengerCancelReasonCategory) |  | Cancellation reason category. |
+| environment_type | [supply.common.v1.EnvironmentType](#supply.common.v1.EnvironmentType) |  | Environment type. Generated per ride by the marketplace, and must be returned by dispatcher in all updates to the ride. |
 
 
 
 
 
 
-<a name="supply.rides.vNext.DemanderCancelRideResponse"/>
+<a name="supply.rides.v1.DemanderCancelRideResponse"/>
 
 ### DemanderCancelRideResponse
 
@@ -373,7 +394,7 @@ Vehicle details
 
 
 
-<a name="supply.rides.vNext.GetRideStatusRequest"/>
+<a name="supply.rides.v1.GetRideStatusRequest"/>
 
 ### GetRideStatusRequest
 
@@ -383,14 +404,14 @@ Vehicle details
 | ----- | ---- | ----- | ----------- |
 | supplier_id | [string](#string) |  | Marketplace generated supplier id. |
 | ride_id | [string](#string) |  | Marketplace generated ride id. |
-| environment_type | [supply.common.vNext.EnvironmentType](#supply.common.vNext.EnvironmentType) |  | Environment type. Generated per ride by the marketplace, and must be returned by dispatcher in all updates to the ride. |
+| environment_type | [supply.common.v1.EnvironmentType](#supply.common.v1.EnvironmentType) |  | Environment type. Generated per ride by the marketplace, and must be returned by dispatcher in all updates to the ride. |
 
 
 
 
 
 
-<a name="supply.rides.vNext.GetSimpleRideOffersRequest"/>
+<a name="supply.rides.v1.GetSimpleRideOffersRequest"/>
 
 ### GetSimpleRideOffersRequest
 
@@ -398,20 +419,21 @@ Vehicle details
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| request_id | [string](#string) |  | Unique request id generated by the markeplace. |
+| request_id | [string](#string) |  | Unique request id generated by the marketplace. |
 | supplier_id | [string](#string) |  | Marketplace ID of the supplier from which we want offers. |
-| pickup | [supply.common.vNext.Location](#supply.common.vNext.Location) |  | Origin of the ride (pickup location). |
-| destination | [supply.common.vNext.Location](#supply.common.vNext.Location) |  | Destination of the ride (dropoff location). |
-| constraints | [SimpleRideBookingConstraints](#supply.rides.vNext.SimpleRideBookingConstraints) |  | Constraints represent the requested ride parameters. |
-| pickup_time | [supply.common.vNext.UnixTime](#supply.common.vNext.UnixTime) |  | Pickup time. |
-| environment_type | [supply.common.vNext.EnvironmentType](#supply.common.vNext.EnvironmentType) |  | Environment type. Generated per ride by the marketplace, and must be returned by dispatcher in all updates to the ride. |
+| pickup | [supply.common.v1.Location](#supply.common.v1.Location) |  | Origin of the ride (pickup location). |
+| destination | [supply.common.v1.Location](#supply.common.v1.Location) |  | Destination of the ride (dropoff location). |
+| constraints | [SimpleRideBookingConstraints](#supply.rides.v1.SimpleRideBookingConstraints) |  | Constraints represent the requested ride parameters. |
+| pickup_time | [supply.common.v1.UnixTime](#supply.common.v1.UnixTime) |  | Pickup time. |
+| passenger_note | [string](#string) |  | Free-text comments by the passenger. |
+| environment_type | [supply.common.v1.EnvironmentType](#supply.common.v1.EnvironmentType) |  | Environment type. Generated per ride by the marketplace, and must be returned by dispatcher in all updates to the ride. |
 
 
 
 
 
 
-<a name="supply.rides.vNext.RideEtaUpdate"/>
+<a name="supply.rides.v1.RideEtaUpdate"/>
 
 ### RideEtaUpdate
 
@@ -421,20 +443,20 @@ Vehicle details
 | ----- | ---- | ----- | ----------- |
 | supplier_id | [string](#string) |  | Marketplace generated supplier id. |
 | ride_id | [string](#string) |  | Marketplace generated ride id. |
-| eta_to_pickup | [supply.common.vNext.UnixTime](#supply.common.vNext.UnixTime) |  | Updated estimated time till pickup. NOTE: DEPRECATED soon - please use eta_to_pickup_seconds. |
-| eta_to_destination | [supply.common.vNext.UnixTime](#supply.common.vNext.UnixTime) |  | Updated estimated time till destination. NOTE: DEPRECATED soon - please use eta_to_destination_seconds. |
-| eta_to_pickup_seconds | [google.protobuf.UInt32Value](#google.protobuf.UInt32Value) |  | Updated estimated time till pickup in seconds. absolute time. |
-| eta_to_destination_seconds | [google.protobuf.UInt32Value](#google.protobuf.UInt32Value) |  | Updated estimated time till destination in seconds. absolute time. |
+| eta_to_pickup | [supply.common.v1.UnixTime](#supply.common.v1.UnixTime) |  | Updated estimated time (in epoch) until pickup. NOTE: DEPRECATED soon - please use eta_to_pickup_seconds. |
+| eta_to_destination | [supply.common.v1.UnixTime](#supply.common.v1.UnixTime) |  | Updated estimated time (in epoch) until destination. NOTE: DEPRECATED soon - please use eta_to_destination_seconds. |
+| eta_to_pickup_seconds | [google.protobuf.UInt32Value](#google.protobuf.UInt32Value) |  | Estimated number of seconds until pickup. For example: 60 seconds until the driver will pick you up |
+| eta_to_destination_seconds | [google.protobuf.UInt32Value](#google.protobuf.UInt32Value) |  | Estimated number of seconds until dropoff. For example: 20 minutes left until dropoff (20*60 = 1200 seconds) |
 | update_id | [string](#string) |  | Dispatcher-generated id which uniquely identifies this update. |
 | update_ts | [google.protobuf.Timestamp](#google.protobuf.Timestamp) |  | Dispatcher-generated timestamp which identifies the update time. |
-| environment_type | [supply.common.vNext.EnvironmentType](#supply.common.vNext.EnvironmentType) |  | Environment type. Generated per ride by the marketplace, and must be returned by dispatcher in all updates to the ride. |
+| environment_type | [supply.common.v1.EnvironmentType](#supply.common.v1.EnvironmentType) |  | Environment type. Generated per ride by the marketplace, and must be returned by dispatcher in all updates to the ride. |
 
 
 
 
 
 
-<a name="supply.rides.vNext.RideLocationUpdate"/>
+<a name="supply.rides.v1.RideLocationUpdate"/>
 
 ### RideLocationUpdate
 
@@ -444,17 +466,17 @@ Vehicle details
 | ----- | ---- | ----- | ----------- |
 | supplier_id | [string](#string) |  | Marketplace generated supplier id. |
 | ride_id | [string](#string) |  | Marketplace generated ride id. |
-| current_location | [supply.common.vNext.Point](#supply.common.vNext.Point) |  | Updated location of the vehicle. |
+| current_location | [supply.common.v1.Point](#supply.common.v1.Point) |  | Updated location of the vehicle. |
 | update_id | [string](#string) |  | Dispatcher-generated id which uniquely identifies this update. |
 | update_ts | [google.protobuf.Timestamp](#google.protobuf.Timestamp) |  | Dispatcher-generated timestamp which identifies the update time. |
-| environment_type | [supply.common.vNext.EnvironmentType](#supply.common.vNext.EnvironmentType) |  | Environment type. Generated per ride by the marketplace, and must be returned by dispatcher in all updates to the ride. |
+| environment_type | [supply.common.v1.EnvironmentType](#supply.common.v1.EnvironmentType) |  | Environment type. Generated per ride by the marketplace, and must be returned by dispatcher in all updates to the ride. |
 
 
 
 
 
 
-<a name="supply.rides.vNext.RidePickupAndDestinationUpdate"/>
+<a name="supply.rides.v1.RidePickupAndDestinationUpdate"/>
 
 ### RidePickupAndDestinationUpdate
 
@@ -464,22 +486,22 @@ Vehicle details
 | ----- | ---- | ----- | ----------- |
 | supplier_id | [string](#string) |  | Marketplace generated supplier id. |
 | ride_id | [string](#string) |  | Marketplace generated ride id. |
-| pickup | [supply.common.vNext.Location](#supply.common.vNext.Location) |  | Updated pickup location. |
-| destination | [supply.common.vNext.Location](#supply.common.vNext.Location) |  | Updated destination location. |
-| eta_to_pickup | [supply.common.vNext.UnixTime](#supply.common.vNext.UnixTime) |  | Updated estimated time of arrival to pickup. NOTE: This field will be deprecated soon, please use eta_to_pickup_seconds instead. |
-| eta_to_destination | [supply.common.vNext.UnixTime](#supply.common.vNext.UnixTime) |  | Updated estimated time of arrival to destination NOTE: This field will be deprecated soon, please use eta_to_destination_seconds instead. |
+| pickup | [supply.common.v1.Location](#supply.common.v1.Location) |  | Updated pickup location. |
+| destination | [supply.common.v1.Location](#supply.common.v1.Location) |  | Updated destination location. |
+| eta_to_pickup | [supply.common.v1.UnixTime](#supply.common.v1.UnixTime) |  | Updated estimated time (in epoch) of arrival to pickup, time since epoch. NOTE: This field will be deprecated soon, please use eta_to_pickup_seconds instead. |
+| eta_to_destination | [supply.common.v1.UnixTime](#supply.common.v1.UnixTime) |  | Updated estimated time (in epoch) of arrival to destination. NOTE: This field will be deprecated soon, please use eta_to_destination_seconds instead. |
 | update_id | [string](#string) |  | Dispatcher-generated id which uniquely identifies this update. |
 | update_ts | [google.protobuf.Timestamp](#google.protobuf.Timestamp) |  | Dispatcher-generated timestamp which identifies the update time. |
-| environment_type | [supply.common.vNext.EnvironmentType](#supply.common.vNext.EnvironmentType) |  | Environment type. Generated per ride by the marketplace, and must be returned by dispatcher in all updates to the ride. |
-| eta_to_pickup_seconds | [google.protobuf.UInt32Value](#google.protobuf.UInt32Value) |  | Updated estimated time till pickup in seconds. absolute time. |
-| eta_to_destination_seconds | [google.protobuf.UInt32Value](#google.protobuf.UInt32Value) |  | Updated estimated time till destination in seconds. absolute time. |
+| environment_type | [supply.common.v1.EnvironmentType](#supply.common.v1.EnvironmentType) |  | Environment type. Generated per ride by the marketplace, and must be returned by dispatcher in all updates to the ride. |
+| eta_to_pickup_seconds | [google.protobuf.UInt32Value](#google.protobuf.UInt32Value) |  | Estimated number of seconds until pickup. For example: 60 seconds until the driver will pick the passenger up |
+| eta_to_destination_seconds | [google.protobuf.UInt32Value](#google.protobuf.UInt32Value) |  | Estimated number of seconds until dropoff. For example: 20 minutes left until dropoff (20*60 = 1200 seconds) |
 
 
 
 
 
 
-<a name="supply.rides.vNext.RidePriceUpdate"/>
+<a name="supply.rides.v1.RidePriceUpdate"/>
 
 ### RidePriceUpdate
 
@@ -489,18 +511,18 @@ Vehicle details
 | ----- | ---- | ----- | ----------- |
 | supplier_id | [string](#string) |  | Marketplace generated supplier id. |
 | ride_id | [string](#string) |  | Marketplace generated ride id. |
-| booking_estimated_price | [supply.common.vNext.Price](#supply.common.vNext.Price) |  | Updated estimated price. |
-| actual_price | [supply.common.vNext.Price](#supply.common.vNext.Price) |  | Updated actual price of the ride. |
+| booking_estimated_price | [supply.common.v1.Price](#supply.common.v1.Price) |  | Updated estimated price. |
+| actual_price | [supply.common.v1.Price](#supply.common.v1.Price) |  | Updated actual price of the ride. |
 | update_id | [string](#string) |  | Dispatcher-generated id which uniquely identifies this update. |
 | update_ts | [google.protobuf.Timestamp](#google.protobuf.Timestamp) |  | Dispatcher-generated timestamp which identifies the update time. |
-| environment_type | [supply.common.vNext.EnvironmentType](#supply.common.vNext.EnvironmentType) |  | Environment type. Generated per ride by the marketplace, and must be returned by dispatcher in all updates to the ride. |
+| environment_type | [supply.common.v1.EnvironmentType](#supply.common.v1.EnvironmentType) |  | Environment type. Generated per ride by the marketplace, and must be returned by dispatcher in all updates to the ride. |
 
 
 
 
 
 
-<a name="supply.rides.vNext.RideRequestedPickupTimeUpdate"/>
+<a name="supply.rides.v1.RideRequestedPickupTimeUpdate"/>
 
 ### RideRequestedPickupTimeUpdate
 
@@ -510,17 +532,17 @@ Vehicle details
 | ----- | ---- | ----- | ----------- |
 | supplier_id | [string](#string) |  | Marketplace generated supplier id. |
 | ride_id | [string](#string) |  | Marketplace generated ride id. |
-| prebook_pickup_time | [supply.common.vNext.UnixTime](#supply.common.vNext.UnixTime) |  | New requested pickup time form the supplier. |
+| prebook_pickup_time | [supply.common.v1.UnixTime](#supply.common.v1.UnixTime) |  | New requested pickup time form the supplier. |
 | update_id | [string](#string) |  | Dispatcher-generated id which uniquely identifies this update. |
 | update_ts | [google.protobuf.Timestamp](#google.protobuf.Timestamp) |  | Dispatcher-generated timestamp which identifies the update time. |
-| environment_type | [supply.common.vNext.EnvironmentType](#supply.common.vNext.EnvironmentType) |  | Environment type. Generated per ride by the marketplace, and must be returned by dispatcher in all updates to the ride. |
+| environment_type | [supply.common.v1.EnvironmentType](#supply.common.v1.EnvironmentType) |  | Environment type. Generated per ride by the marketplace, and must be returned by dispatcher in all updates to the ride. |
 
 
 
 
 
 
-<a name="supply.rides.vNext.RideVehicleAndDriverUpdate"/>
+<a name="supply.rides.v1.RideVehicleAndDriverUpdate"/>
 
 ### RideVehicleAndDriverUpdate
 
@@ -530,18 +552,18 @@ Vehicle details
 | ----- | ---- | ----- | ----------- |
 | supplier_id | [string](#string) |  | Marketplace generated supplier id. |
 | ride_id | [string](#string) |  | Marketplace generated ride id. |
-| vehicle | [supply.common.vNext.Vehicle](#supply.common.vNext.Vehicle) |  | Updated vehicle. |
-| driver | [supply.common.vNext.DriverDetails](#supply.common.vNext.DriverDetails) |  | Updated driver. |
+| vehicle | [supply.common.v1.Vehicle](#supply.common.v1.Vehicle) |  | Updated vehicle. |
+| driver | [supply.common.v1.DriverDetails](#supply.common.v1.DriverDetails) |  | Updated driver. |
 | update_id | [string](#string) |  | Dispatcher-generated id which uniquely identifies this update. |
 | update_ts | [google.protobuf.Timestamp](#google.protobuf.Timestamp) |  | Dispatcher-generated timestamp which identifies the update time. |
-| environment_type | [supply.common.vNext.EnvironmentType](#supply.common.vNext.EnvironmentType) |  | Environment type. Generated per ride by the marketplace, and must be returned by dispatcher in all updates to the ride. |
+| environment_type | [supply.common.v1.EnvironmentType](#supply.common.v1.EnvironmentType) |  | Environment type. Generated per ride by the marketplace, and must be returned by dispatcher in all updates to the ride. |
 
 
 
 
 
 
-<a name="supply.rides.vNext.SimpleRideBookingConstraints"/>
+<a name="supply.rides.v1.SimpleRideBookingConstraints"/>
 
 ### SimpleRideBookingConstraints
 
@@ -549,7 +571,7 @@ Vehicle details
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| passengers_no | [uint32](#uint32) |  | Number of pasengers. |
+| passengers_no | [uint32](#uint32) |  | Number of passengers. |
 | suitcases_no | [uint32](#uint32) |  | Number of suitcases. |
 
 
@@ -557,7 +579,7 @@ Vehicle details
 
 
 
-<a name="supply.rides.vNext.SimpleRideDetails"/>
+<a name="supply.rides.v1.SimpleRideDetails"/>
 
 ### SimpleRideDetails
 
@@ -565,12 +587,12 @@ Vehicle details
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| pickup | [supply.common.vNext.Location](#supply.common.vNext.Location) |  | Origin of the ride. |
-| destination | [supply.common.vNext.Location](#supply.common.vNext.Location) |  | Destination of the ride. |
-| constraints | [SimpleRideBookingConstraints](#supply.rides.vNext.SimpleRideBookingConstraints) |  | Special requests of the client. |
-| passenger_details | [supply.common.vNext.PassengerDetails](#supply.common.vNext.PassengerDetails) |  | Details of the passenger. |
-| pickup_time | [supply.common.vNext.UnixTime](#supply.common.vNext.UnixTime) |  | Requested pickuo time. |
-| passenger_note | [string](#string) |  | Free-text comments by the passanger. |
+| pickup | [supply.common.v1.Location](#supply.common.v1.Location) |  | Origin of the ride. |
+| destination | [supply.common.v1.Location](#supply.common.v1.Location) |  | Destination of the ride. |
+| constraints | [SimpleRideBookingConstraints](#supply.rides.v1.SimpleRideBookingConstraints) |  | Special requests of the client. |
+| passenger_details | [supply.common.v1.PassengerDetails](#supply.common.v1.PassengerDetails) |  | Details of the passenger. |
+| pickup_time | [supply.common.v1.UnixTime](#supply.common.v1.UnixTime) |  | Requested pickuo time. |
+| passenger_note | [string](#string) |  | Free-text comments by the passenger. |
 | dispatcher_offer_id | [string](#string) |  | Supplier generated unique offer ID. See SimpleRideOffer. |
 
 
@@ -578,7 +600,7 @@ Vehicle details
 
 
 
-<a name="supply.rides.vNext.SimpleRideOffer"/>
+<a name="supply.rides.v1.SimpleRideOffer"/>
 
 ### SimpleRideOffer
 
@@ -587,18 +609,18 @@ Vehicle details
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | dispatcher_offer_id | [string](#string) |  | Supplier generated unique offer ID. Relevant only for selectable offers. |
-| pickup_eta | [supply.common.vNext.UnixTime](#supply.common.vNext.UnixTime) |  | Estimated pickup time. NOTE: This field will be deprecated soon. please use pickup_eta_seconds instead. |
-| dropoff_eta | [supply.common.vNext.UnixTime](#supply.common.vNext.UnixTime) |  | Estimated dropoff time. NOTE: This field will be deprecated soon. please use estimated_ride_duration_seconds instead. |
-| booking_estimated_price | [supply.common.vNext.Price](#supply.common.vNext.Price) |  | Estimated price. |
-| pickup_eta_seconds | [google.protobuf.UInt32Value](#google.protobuf.UInt32Value) |  | Estimated pickup time in seconds. absolute time. |
-| estimated_ride_duration_seconds | [google.protobuf.UInt32Value](#google.protobuf.UInt32Value) |  | Estimated dropoff time in seconds. absolute time. This is the time between pickup to dropoff. It does not contain the time to pickup. |
+| pickup_eta | [supply.common.v1.UnixTime](#supply.common.v1.UnixTime) |  | Estimated pickup time in epoch. NOTE: This field will be deprecated soon. please use pickup_eta_seconds instead. |
+| dropoff_eta | [supply.common.v1.UnixTime](#supply.common.v1.UnixTime) |  | Estimated dropoff time in epoch. NOTE: This field will be deprecated soon. please use estimated_ride_duration_seconds instead. |
+| booking_estimated_price | [supply.common.v1.Price](#supply.common.v1.Price) |  | Estimated price. |
+| pickup_eta_seconds | [google.protobuf.UInt32Value](#google.protobuf.UInt32Value) |  | Estimated number of seconds until pickup. For example: 60 seconds until the driver will pick the passenger up |
+| estimated_ride_duration_seconds | [google.protobuf.UInt32Value](#google.protobuf.UInt32Value) |  | Estimated number of seconds between pickup and dropoff. It does not include the time until pickup. For example: ride duration is 20 minutes (20*60 = 1200 seconds) |
 
 
 
 
 
 
-<a name="supply.rides.vNext.SimpleRideOffers"/>
+<a name="supply.rides.v1.SimpleRideOffers"/>
 
 ### SimpleRideOffers
 
@@ -608,15 +630,15 @@ Vehicle details
 | ----- | ---- | ----- | ----------- |
 | request_id | [string](#string) |  | Set to the request_id received in the original GetSimpleRideOffersRequest. |
 | is_selectable | [bool](#bool) |  | An offer is selectable if during ride creation, demander can ask for this specific offer to be used to create the ride. |
-| offers | [SimpleRideOffer](#supply.rides.vNext.SimpleRideOffer) | repeated | A set of offers. |
-| supplier | [supply.common.vNext.Supplier](#supply.common.vNext.Supplier) |  | Details of the supplier. Given for aggregate suppliers. |
+| offers | [SimpleRideOffer](#supply.rides.v1.SimpleRideOffer) | repeated | A set of offers. |
+| supplier | [supply.common.v1.Supplier](#supply.common.v1.Supplier) |  | Details of the supplier. Given for aggregate suppliers. |
 
 
 
 
 
 
-<a name="supply.rides.vNext.SupplierCancelRideRequest"/>
+<a name="supply.rides.v1.SupplierCancelRideRequest"/>
 
 ### SupplierCancelRideRequest
 
@@ -627,16 +649,17 @@ Vehicle details
 | supplier_id | [string](#string) |  | Marketplace generated supplier id. |
 | ride_id | [string](#string) |  | Marketplace generated ride id. |
 | cancel_reason | [string](#string) |  | Cancellation reason. |
+| cancel_reason_category | [SupplierCancelRideRequest.SupplierCancelReasonCategory](#supply.rides.v1.SupplierCancelRideRequest.SupplierCancelReasonCategory) |  | Cancellation reason category. |
 | update_id | [string](#string) |  | Dispatcher-generated id which uniquely identifies this update. |
 | update_ts | [google.protobuf.Timestamp](#google.protobuf.Timestamp) |  | Dispatcher-generated timestamp which identifies the update time. |
-| environment_type | [supply.common.vNext.EnvironmentType](#supply.common.vNext.EnvironmentType) |  | Environment type. Generated per ride by the marketplace, and must be returned by dispatcher in all updates to the ride. |
+| environment_type | [supply.common.v1.EnvironmentType](#supply.common.v1.EnvironmentType) |  | Environment type. Generated per ride by the marketplace, and must be returned by dispatcher in all updates to the ride. |
 
 
 
 
 
 
-<a name="supply.rides.vNext.SupplierRideStatus"/>
+<a name="supply.rides.v1.SupplierRideStatus"/>
 
 ### SupplierRideStatus
 
@@ -646,7 +669,7 @@ Vehicle details
 | ----- | ---- | ----- | ----------- |
 | supplier_id | [string](#string) |  | Marketplace generated supplier id. |
 | ride_id | [string](#string) |  | Marketplace generated ride id. |
-| status_code | [SupplierRideStatus.RideStatus](#supply.rides.vNext.SupplierRideStatus.RideStatus) |  | Current status of te ride. |
+| status_code | [SupplierRideStatus.RideStatus](#supply.rides.v1.SupplierRideStatus.RideStatus) |  | Current status of te ride. |
 | status_information | [string](#string) |  | Additional information regarding the current state. |
 
 
@@ -654,7 +677,7 @@ Vehicle details
 
 
 
-<a name="supply.rides.vNext.SupplierRideStatusUpdate"/>
+<a name="supply.rides.v1.SupplierRideStatusUpdate"/>
 
 ### SupplierRideStatusUpdate
 
@@ -664,20 +687,55 @@ Vehicle details
 | ----- | ---- | ----- | ----------- |
 | supplier_id | [string](#string) |  | Marketplace generated supplier id. |
 | ride_id | [string](#string) |  | Marketplace generated ride id. |
-| status_code | [SupplierRideStatusUpdate.RideStatus](#supply.rides.vNext.SupplierRideStatusUpdate.RideStatus) |  | Current status of te ride. |
+| status_code | [SupplierRideStatusUpdate.RideStatus](#supply.rides.v1.SupplierRideStatusUpdate.RideStatus) |  | Current status of te ride. |
 | status_information | [string](#string) |  | Additional information regarding the current state. |
 | update_id | [string](#string) |  | Dispatcher-generated id which uniquely identifies this update. |
 | update_ts | [google.protobuf.Timestamp](#google.protobuf.Timestamp) |  | Dispatcher-generated timestamp which identifies the update time. |
-| environment_type | [supply.common.vNext.EnvironmentType](#supply.common.vNext.EnvironmentType) |  | Environment type. Generated per ride by the marketplace, and must be returned by dispatcher in all updates to the ride. |
+| environment_type | [supply.common.v1.EnvironmentType](#supply.common.v1.EnvironmentType) |  | Environment type. Generated per ride by the marketplace, and must be returned by dispatcher in all updates to the ride. |
 
 
 
 
 
+ 
+
+
+<a name="supply.rides.v1.DemanderCancelRideRequest.PassengerCancelReasonCategory"/>
+
+### DemanderCancelRideRequest.PassengerCancelReasonCategory
+Passenger cancellation reason category
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| UNKNOWN_PASSENGER_CANCEL_REASON_CATEGORY | 0 | Unknown cancellation category. |
+| DRIVER_NO_SHOW | 1 | Driver did not show up. |
+| PRICE_CHANGED | 2 | Ride price changed. |
+| ETA_CHANGED | 3 | Ride ETA changed. |
+| UNSUITABLE_VEHICLE | 4 | Ride vehicle is not suitable. |
+| DRIVER_BEHAVED_INAPPROPRIATELY | 5 | Driver behaved inappropriately. |
+| CHANGED_MY_PLANS | 6 | Passenger changed plans. |
+| OTHER_PASSENGER_CANCEL_REASON_CATEGORY | 100 | Other. |
 
 
 
-<a name="supply.rides.vNext.SupplierRideStatus.RideStatus"/>
+<a name="supply.rides.v1.SupplierCancelRideRequest.SupplierCancelReasonCategory"/>
+
+### SupplierCancelRideRequest.SupplierCancelReasonCategory
+Supplier cancellation reason category
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| UNKNOWN_SUPPLIER_CANCEL_REASON_CATEGORY | 0 | Unknown cancellation category. |
+| DRIVERS_UNAVAILABLE | 1 | No available drivers for ride. |
+| PASSENGER_NO_SHOW | 2 | Passenger did not show up for the ride. |
+| PASSENGER_REQUESTED_TO_CANCEL | 3 | Passenger requested to cancel the ride. |
+| VEHICLE_MALFUNCTION | 4 | Vehicle mulfunction. |
+| HEAVY_TRAFFIC | 5 | Heavy traffic. |
+| OTHER_SUPPLIER_CANCEL_REASON_CATEGORY | 100 | Other cancellation cetegory. |
+
+
+
+<a name="supply.rides.v1.SupplierRideStatus.RideStatus"/>
 
 ### SupplierRideStatus.RideStatus
 RideStatus represents the different statuses a ride can be at.
@@ -690,13 +748,13 @@ RideStatus represents the different statuses a ride can be at.
 | DRIVER_ASSIGNED | 2 | Driver is allocated, but ride has not yet started. |
 | DRIVER_EN_ROUTE | 3 | Drive started and driver is en-route. |
 | AT_PICKUP | 4 | Driver is arrived at the pickup point, but passenger is not yet on board. |
-| PASSANGER_ON_BOARD | 5 | Passenger is on board and drive to destination starterd. |
+| PASSENGER_ON_BOARD | 5 | Passenger is on board and drive to destination started. |
 | COMPLETED | 6 | Ride complete and passenger disembarked. |
 | CANCELED | 7 | Ride is cancelled (due to supplier or due to demander). |
 
 
 
-<a name="supply.rides.vNext.SupplierRideStatusUpdate.RideStatus"/>
+<a name="supply.rides.v1.SupplierRideStatusUpdate.RideStatus"/>
 
 ### SupplierRideStatusUpdate.RideStatus
 RideStatus represents the different statuses a ride can be at.
@@ -709,7 +767,7 @@ RideStatus represents the different statuses a ride can be at.
 | DRIVER_ASSIGNED | 2 | Driver is allocated, but ride has not yet started. |
 | DRIVER_EN_ROUTE | 3 | Drive started and driver is en-route. |
 | AT_PICKUP | 4 | Driver is arrived at the pickup point, but passenger is not yet on board. |
-| PASSANGER_ON_BOARD | 5 | Passenger is on board and drive to destination starterd. |
+| PASSENGER_ON_BOARD | 5 | Passenger is on board and drive to destination started. |
 | COMPLETED | 6 | Ride complete and passenger disembarked. |
 | CANCELED | 7 | Ride is cancelled (due to supplier or due to demander). |
 
@@ -722,10 +780,10 @@ RideStatus represents the different statuses a ride can be at.
 
 
 
-<a name="marketplace/public/grpc/supply_handler/vNext/gen-doc/supply_handler_rides_service.proto"/>
+<a name="marketplace/public/grpc/supply_handler/v1/gen-doc/supply_handler_rides_service.proto"/>
 <p align="right"><a href="#top">Top</a></p>
 
-## marketplace/public/grpc/supply_handler/vNext/gen-doc/supply_handler_rides_service.proto
+## marketplace/public/grpc/supply_handler/v1/gen-doc/supply_handler_rides_service.proto
 
 
  
@@ -735,43 +793,43 @@ RideStatus represents the different statuses a ride can be at.
  
 
 
-<a name="supply.rides.vNext.RidesDispatchApi"/>
+<a name="supply.rides.v1.RidesDispatchApi"/>
 
 ### RidesDispatchApi
 
 
 | Method Name | Request Type | Response Type | Description |
 | ----------- | ------------ | ------------- | ------------|
-| RequestOffers | [GetSimpleRideOffersRequest](#supply.rides.vNext.GetSimpleRideOffersRequest) | [SimpleRideOffers](#supply.rides.vNext.GetSimpleRideOffersRequest) | Request ride offers from the supplier |
-| CreateRide | [CreateSimpleRideRequest](#supply.rides.vNext.CreateSimpleRideRequest) | [CreateSimpleRideResponse](#supply.rides.vNext.CreateSimpleRideRequest) | Create a ride with the supplier |
-| CancelRide | [DemanderCancelRideRequest](#supply.rides.vNext.DemanderCancelRideRequest) | [DemanderCancelRideResponse](#supply.rides.vNext.DemanderCancelRideRequest) | Update the supplier that the demander has cancelled the ride. |
-| GetRideStatus | [GetRideStatusRequest](#supply.rides.vNext.GetRideStatusRequest) | [SupplierRideStatus](#supply.rides.vNext.GetRideStatusRequest) | Request the latest status of the ride from the supplier |
+| RequestOffers | [GetSimpleRideOffersRequest](#supply.rides.v1.GetSimpleRideOffersRequest) | [SimpleRideOffers](#supply.rides.v1.GetSimpleRideOffersRequest) | Request ride offers from the supplier |
+| CreateRide | [CreateSimpleRideRequest](#supply.rides.v1.CreateSimpleRideRequest) | [CreateSimpleRideResponse](#supply.rides.v1.CreateSimpleRideRequest) | Create a ride with the supplier |
+| CancelRide | [DemanderCancelRideRequest](#supply.rides.v1.DemanderCancelRideRequest) | [DemanderCancelRideResponse](#supply.rides.v1.DemanderCancelRideRequest) | Update the supplier that the demander has cancelled the ride. |
+| GetRideStatus | [GetRideStatusRequest](#supply.rides.v1.GetRideStatusRequest) | [SupplierRideStatus](#supply.rides.v1.GetRideStatusRequest) | Request the latest status of the ride from the supplier |
 
 
-<a name="supply.rides.vNext.RidesSupplyApi"/>
+<a name="supply.rides.v1.RidesSupplyApi"/>
 
 ### RidesSupplyApi
 
 
 | Method Name | Request Type | Response Type | Description |
 | ----------- | ------------ | ------------- | ------------|
-| UpdateRideStatus | [SupplierRideStatusUpdate](#supply.rides.vNext.SupplierRideStatusUpdate) | [.supply.common.vNext.Empty](#supply.rides.vNext.SupplierRideStatusUpdate) | Update the marketplace that the ride status changed |
-| UpdateRideLocation | [RideLocationUpdate](#supply.rides.vNext.RideLocationUpdate) | [.supply.common.vNext.Empty](#supply.rides.vNext.RideLocationUpdate) | Update the marketplace that the vehicle location has changed |
-| UpdateRideVehicleAndDriver | [RideVehicleAndDriverUpdate](#supply.rides.vNext.RideVehicleAndDriverUpdate) | [.supply.common.vNext.Empty](#supply.rides.vNext.RideVehicleAndDriverUpdate) | Update the marketplace that the assigned vehicle and driver have changed |
-| UpdateRidePickupAndDestination | [RidePickupAndDestinationUpdate](#supply.rides.vNext.RidePickupAndDestinationUpdate) | [.supply.common.vNext.Empty](#supply.rides.vNext.RidePickupAndDestinationUpdate) | Update the marketplace that the meeting pickup and destination points changed |
-| UpdateRideEta | [RideEtaUpdate](#supply.rides.vNext.RideEtaUpdate) | [.supply.common.vNext.Empty](#supply.rides.vNext.RideEtaUpdate) | Update the marketplace that estimated time to arrival to the origin and and to destination has changed Recommended to update only when there is a major change (1 minute at least) |
-| UpdateRidePrice | [RidePriceUpdate](#supply.rides.vNext.RidePriceUpdate) | [.supply.common.vNext.Empty](#supply.rides.vNext.RidePriceUpdate) | Update the marketplace that the ride price has changed |
-| UpdateRideRequestedPickupTime | [RideRequestedPickupTimeUpdate](#supply.rides.vNext.RideRequestedPickupTimeUpdate) | [.supply.common.vNext.Empty](#supply.rides.vNext.RideRequestedPickupTimeUpdate) |  |
-| CancelRide | [SupplierCancelRideRequest](#supply.rides.vNext.SupplierCancelRideRequest) | [.supply.common.vNext.Empty](#supply.rides.vNext.SupplierCancelRideRequest) | Update the marketplace that the assigned supplier has cancelled the ride |
+| UpdateRideStatus | [SupplierRideStatusUpdate](#supply.rides.v1.SupplierRideStatusUpdate) | [.supply.common.v1.Empty](#supply.rides.v1.SupplierRideStatusUpdate) | Update the marketplace that the ride status changed |
+| UpdateRideLocation | [RideLocationUpdate](#supply.rides.v1.RideLocationUpdate) | [.supply.common.v1.Empty](#supply.rides.v1.RideLocationUpdate) | Update the marketplace that the vehicle location has changed |
+| UpdateRideVehicleAndDriver | [RideVehicleAndDriverUpdate](#supply.rides.v1.RideVehicleAndDriverUpdate) | [.supply.common.v1.Empty](#supply.rides.v1.RideVehicleAndDriverUpdate) | Update the marketplace that the assigned vehicle and driver have changed |
+| UpdateRidePickupAndDestination | [RidePickupAndDestinationUpdate](#supply.rides.v1.RidePickupAndDestinationUpdate) | [.supply.common.v1.Empty](#supply.rides.v1.RidePickupAndDestinationUpdate) | Update the marketplace that the meeting pickup and destination points changed |
+| UpdateRideEta | [RideEtaUpdate](#supply.rides.v1.RideEtaUpdate) | [.supply.common.v1.Empty](#supply.rides.v1.RideEtaUpdate) | Update the marketplace that estimated time to arrival to the origin and and to destination has changed Recommended to update only when there is a major change (1 minute at least) |
+| UpdateRidePrice | [RidePriceUpdate](#supply.rides.v1.RidePriceUpdate) | [.supply.common.v1.Empty](#supply.rides.v1.RidePriceUpdate) | Update the marketplace that the ride price has changed |
+| UpdateRideRequestedPickupTime | [RideRequestedPickupTimeUpdate](#supply.rides.v1.RideRequestedPickupTimeUpdate) | [.supply.common.v1.Empty](#supply.rides.v1.RideRequestedPickupTimeUpdate) |  |
+| CancelRide | [SupplierCancelRideRequest](#supply.rides.v1.SupplierCancelRideRequest) | [.supply.common.v1.Empty](#supply.rides.v1.SupplierCancelRideRequest) | Update the marketplace that the assigned supplier has cancelled the ride |
 
  
 
 
 
-<a name="marketplace/public/grpc/supply_handler/vNext/gen-doc/supply_handler_shared_rides_messages.proto"/>
+<a name="marketplace/public/grpc/supply_handler/v1/gen-doc/supply_handler_shared_rides_messages.proto"/>
 <p align="right"><a href="#top">Top</a></p>
 
-## marketplace/public/grpc/supply_handler/vNext/gen-doc/supply_handler_shared_rides_messages.proto
+## marketplace/public/grpc/supply_handler/v1/gen-doc/supply_handler_shared_rides_messages.proto
 
 
  
@@ -784,10 +842,10 @@ RideStatus represents the different statuses a ride can be at.
 
 
 
-<a name="marketplace/public/grpc/supply_handler/vNext/gen-doc/supply_handler_shared_rides_service.proto"/>
+<a name="marketplace/public/grpc/supply_handler/v1/gen-doc/supply_handler_shared_rides_service.proto"/>
 <p align="right"><a href="#top">Top</a></p>
 
-## marketplace/public/grpc/supply_handler/vNext/gen-doc/supply_handler_shared_rides_service.proto
+## marketplace/public/grpc/supply_handler/v1/gen-doc/supply_handler_shared_rides_service.proto
 
 
  
