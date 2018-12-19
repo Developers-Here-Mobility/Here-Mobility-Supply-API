@@ -16,7 +16,6 @@
     - [UnixTime](#supply.common.v1.UnixTime)
     - [Vehicle](#supply.common.v1.Vehicle)
 
-    - [EnvironmentType](#supply.common.v1.EnvironmentType)
     - [PaymentFlow](#supply.common.v1.PaymentFlow)
     - [Vehicle.VehicleType](#supply.common.v1.Vehicle.VehicleType)
 
@@ -276,20 +275,6 @@ Vehicle details
 
 
 
-
-
-
-<a name="supply.common.v1.EnvironmentType"/>
-
-### EnvironmentType
-
-
-| Name | Number | Description |
-| ---- | ------ | ----------- |
-| UNKNOWN | 0 |  |
-| SANDBOX | 1 |  |
-| PRODUCTION | 2 |  |
-| TEST | 3 |  |
 
 
 
