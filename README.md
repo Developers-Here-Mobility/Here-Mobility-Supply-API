@@ -17,6 +17,7 @@
     - [Vehicle](#supply.common.v1.Vehicle)
 
     - [PaymentFlow](#supply.common.v1.PaymentFlow)
+    - [Place.PlaceCategory](#supply.common.v1.Place.PlaceCategory)
     - [Vehicle.VehicleType](#supply.common.v1.Vehicle.VehicleType)
 
 
@@ -181,7 +182,7 @@
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | name | [string](#string) |  | Optional. The place&#39;s name. |
-| category | [string](#string) |  | Optional. The place&#39;s category (e.g.: Airport, Restaurant, Park, etc.). |
+| category | [Place.PlaceCategory](#supply.common.v1.Place.PlaceCategory) |  | Optional. The place&#39;s category (e.g.: Airport, Restaurant, Park, etc.). |
 
 
 
@@ -287,6 +288,77 @@ Information about the payment flow used in a ride
 | ---- | ------ | ----------- |
 | OFFLINE_PAYMENT | 0 | Offline payment flow is used. |
 | ONLINE_PAYMENT | 1 | Online payment flow is used. |
+
+
+
+<a name="supply.common.v1.Place.PlaceCategory"/>
+
+### Place.PlaceCategory
+
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| UNKNOWN | 0 |  |
+| RESTAURANT | 1000 | An establishment that prepares and serves refreshments and prepared meals. |
+| COFFEE_TEA | 1100 | An establishment that sells drinks, such as coffee and tea, as well as refreshments. |
+| NIGHTLIFE | 2000 | An establishment that provides evening entertainment and usually serves alcoholic beverages. |
+| CINEMA | 2100 | An establishment that shows movies through screen projection. |
+| CULTURE | 2200 | An establishment where various types of performing arts are presented. |
+| GAMBLING_LOTTERY | 2300 | An establishment that provides gambling entertainment. |
+| ATTRACTION | 3000 | A designated area of special interest to tourists. |
+| MUSEUM | 3100 | An establishment dedicated to the preservation and exhibition of artistic, historical, or scientific artifacts. |
+| RELIGIOUS_PLACE | 3200 | An establishment of special religious significance or where religious services are held. |
+| WATER | 3500 | A natural and geographical feature of the earth&#39;s surface that is covered with water, such as a lake, river, stream or ocean. |
+| MOUNTAIN | 3510 | A natural and geographical feature that is higher than the surrounding land. |
+| UNDERSEA | 3520 | Undersea attractions |
+| FOREST | 3522 | A forest, heath or other vegetation |
+| GEOGRAPHICAL | 3550 | Natural and geographical locations |
+| AIRPORT | 4000 | A designated area that serves various aspects of aviation related sports, including gliders, recreational aircraft and model airplanes. |
+| PUBLIC_TRANSPORTATION | 4100 | A facility for travelers who are travelling between stops on public transport. |
+| CARGO_TRANSPORTATION | 4200 | A facility that handles some aspect of the transportation of cargo freight. |
+| REST_AREA | 4300 | An establishment along a motorway (controlled access road) that provides restrooms and parking. |
+| HOTEL | 5000 | A business that provides lodging or temporary living quarters. |
+| LODGE | 5100 | A business that provides lodging to the public generally without room service. |
+| OUTDOORS | 5510 | Public land preserved and maintained for recreational use. |
+| LEISURE | 5520 | A park that contains rides and/or other entertainment which may be based on a central theme. |
+| CONVENIENCE_STORE | 6000 | An establishment that sells groceries, candy, toiletries, soft drinks, tobacco products, newspapers and other products. |
+| SHOPPING_CENTER | 6100 | A complex of businesses that are co-located and share common services. |
+| DEPARTMENT_STORE | 6200 | A business that sells a wide variety of merchandise that is organized by product or service departments. |
+| FOOD_AND_DRINKS | 6300 | A business that sells specialty products of a particular type of food or beverage. |
+| PHARMACY | 6400 | A business that sells medications, toiletry items and other retail cosmetics. |
+| ELECTRONICS | 6500 | A business that sells consumer electronics and electronic entertainment equipment. |
+| HARDWARE_HOUSE_GARDEN | 6600 | A business that sells crafts, gardening, remodeling, or decorating items for the home. |
+| BOOKSTORE | 6700 | A business that sells books, magazines and other reading material. |
+| CLOTHING_AND_ACCESSORIES | 6800 | A business that sells apparel items, garments or fashion accessories for men, women, and children. |
+| STORE | 6900 | A business that sells a variety of products targeted to consumers. |
+| HAIR_BEAUTY | 6950 | A business that provides hair styling and personal appearance services. Places in this category may also sell hair products and other related cosmetic items. |
+| BANKING | 7000 | Businesses that specialize in the maintenance, lending, exchange, or issuance of money. |
+| ATM | 7010 | A computer terminal that allows bank customers to deposit, withdraw, or transfer funds without the assistance of a bank teller. |
+| MONEY_SERVICES | 7050 | Businesses that provide money related services. |
+| MEDIA | 7100 | Businesses that provide communication services. |
+| COMMERCIAL_SERVICES | 7201 | Businesses that provide a service or product for use by other businesses. |
+| BUSINESS_INDUSTRY | 7250 | Businesses that employ people in and around the city in which it is located. |
+| EMERGANCY_SERVICES | 7300 | Municipal emergency services |
+| CONSUMER_SERVICES | 7400 | An organization that provides consumer services for a variety of products for used by the public. |
+| POST_OFFICE | 7450 | An office or station that receives, sorts, dispatches and delivers mail to a specific area or region. |
+| TOOURIST_INFORMATION | 7460 | Businesses that provide a variety of information for visiting tourists, such as event schedules, lodging/accommodations, restaurants, attractions and more |
+| FEUL_STATION | 7600 | Businesses that sell fuel for vehicles |
+| CAR_DEALER | 7800 | Businesses that sell new automobiles and motorcycles. |
+| CAR_REPAIR | 7850 | Businesses that provide automotive repair services. |
+| CAR_RENTAL | 7851 | Businesses that rent or lease automobiles. |
+| TRUCK_SERVICES | 7900 | Business that sell or service trucks and tractor trailers. |
+| HEALTH_CARE | 8000 | Facilities that include dental offices, hospitals, nursing homes and other health care-related services. |
+| GOVERNMENT | 8100 | A Place where government services are provided. |
+| EDUCATION | 8200 | Facilities that are used for educational purposes including primary schooling, secondary schooling, universities and more. |
+| LIBRARY | 8300 | Facilities that offer books, periodicals, audio, video and other material for public use. |
+| EVENTS | 8400 | An area or facility used for the hosting of fairs and conventions. |
+| PARKING | 8500 | Area or building used for parking cars |
+| SPORTS | 8600 | A facility used for individual and team sports including recreational sports. |
+| FACILITIES | 8700 | Facilities with miscellaneous uses such as Clubhouses, Offices, and Registration Offices. |
+| CITY | 9100 | Represents a named settlement that may be a (large) city, town, or tiny village |
+| OUTDOORS_COMPLEX | 9200 | Outdoor areas or complexes with designations for specific businesses or interests. |
+| BUILDING | 9300 | Areas and buildings designated for residential or office use |
+| ADMINISTRATIVE_REGION | 9400 | An administrative region, such as a postal area, or a named street/square/intersection. |
 
 
 
@@ -856,4 +928,3 @@ RideStatus represents the different statuses a ride can be at.
 | <a name="bool" /> bool |  | bool | boolean | boolean |
 | <a name="string" /> string | A string must always contain UTF-8 encoded or 7-bit ASCII text. | string | String | str/unicode |
 | <a name="bytes" /> bytes | May contain any arbitrary sequence of bytes. | string | ByteString | str |
-
